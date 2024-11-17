@@ -1,24 +1,24 @@
-# Task for the Today
-# Take a 3 input from the user
-# perform the sub, sub, mul and div
+#Task 1 for the Today
+# Take a 2 input from the user
+# Print the Quotient and Remainder
+# 15 ->  num1
+# 2 -> num2
+# Q -> 7
+# R -> 1
 
 num1 = input("Enter the value of num1")
 num2 = input("Enter the value of num2")
-num3 = input("Enter the value of num3")
 num1 = int(num1)
 num2 = int(num2)
-num3 = int(num3)
-print("Sum: ", num1+num2+num3)
-print("Sub: ", num1-num2-num3)
-print("Mul: ", num1*num2*num3)
-print("Div: ", num1/num2/num3)
+print("Quotient: ", num1//num2)
+print("Remainder: ", num1%num2)
+#or
+print(divmod(15,2))
 
-"""Output:
-Enter the value of num11000
-Enter the value of num2100
-Enter the value of num310
-Sum:  1110
-Sub:  890
-Mul:  1000000
-Div:  1.0
+"""
+Output:
+Enter the value of num115
+Enter the value of num22
+Quotient:  7
+Remainder:  1
 """
