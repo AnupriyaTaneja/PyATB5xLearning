@@ -12,10 +12,13 @@ def sum(num1=100, num2=200, num3=300):
     return num1 + num2 + num3
 
 result = sum(a,b,c)
-print(result)
+print("Sum of first three numbers is ",result)
 
 result_2 = sum()
+print("Sum of next three numbers is ", result_2)
 result_2 = sum(10)
+print("Sum of next three numbers is ", result_2)
 result_2 = sum(10,20)
+print("Sum of next three numbers is ", result_2)
 result_2 = sum(10,20,30)
-print(result_2)
+print("Sum of next three numbers is ", result_2)
