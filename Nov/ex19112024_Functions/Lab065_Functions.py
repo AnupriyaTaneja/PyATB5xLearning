@@ -1,5 +1,5 @@
-def 123():
-    print("Hi") # invalid as function name cant start with digit
+#def 123():
+ #   print("Hi") # invalid as function name cant start with digit
 # identifier rule is failed
 #error-> identifier expected
 
