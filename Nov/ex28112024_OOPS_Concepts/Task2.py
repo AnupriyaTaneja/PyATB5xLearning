@@ -24,7 +24,7 @@ class API_RestfulBooker:
 
 
 obj1 = API_RestfulBooker ("Restful API Booker", ["ABC", "DEF"], {"www.abc.com", "www.pqr.in"})
-obj1.showName()
+obj1.showName() # call
 obj1.showList()
 obj1.showLinks()
 
