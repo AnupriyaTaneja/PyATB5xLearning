@@ -1,5 +1,6 @@
 # Create a Program
-# Class - PC
+# Class - PC (Parent class)
+# Child classes: MotherBoard, RAM, Processor, Storage
 # Class - MotherBoard
 # ab → start MotherBoard
 # Class - RAM
@@ -8,12 +9,8 @@
 # abstractMethod → start processor
 # Class - Storage
 # abstractMethod → storage data,
-# static method
-# loadOS
-# non static
-# startMouse
-# UseHeadPhone
-
+# static method - loadOS
+# non-static methods - startMouse, UseHeadPhone
 
 from abc import ABC, abstractmethod
 

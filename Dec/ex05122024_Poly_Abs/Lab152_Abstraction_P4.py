@@ -14,7 +14,7 @@ class Browser(ExcelReader):
     @abstractmethod
     def stopBrowser(self):
         pass
-
+#Abstract method is forced to be implemented in the child class
 
 class TC1():
     def startBrowser(self):

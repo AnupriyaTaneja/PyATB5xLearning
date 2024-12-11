@@ -3,6 +3,7 @@ from abc import ABC, abstractmethod
 class Father(ABC):
     def __init__(self,name):
         self.name = name
+        print("Loan completed by: ", name)
 
     @abstractmethod
     def loan(self):
@@ -14,5 +15,5 @@ class Son(Father):
         print("1L given")
 
 
-pramod_obj = Son("pramod")
-pramod_obj.loan()
+son_obj = Son("xyz")
+son_obj.loan()

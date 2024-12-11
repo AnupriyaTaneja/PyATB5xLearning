@@ -1,9 +1,9 @@
 # Custom Exp.
 
-class LowBalanceExceptionCustom(Exception):
+class LowBalanceExceptionCustom(Exception): # Exception is a parent class to be used for customer exceptions
     def __init__(self, message):
         self.message = message
-        super().__init__(message)
+        super().__init__(message) # calling Exception class's constructora
 
 
 balance = 100
