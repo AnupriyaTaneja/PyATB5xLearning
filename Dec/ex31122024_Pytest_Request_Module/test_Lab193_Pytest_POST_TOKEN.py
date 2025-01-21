@@ -11,7 +11,6 @@ var_header = {"Content-Type": "application/json"}
 # Create Token - POST
 def get_token():
 
-
     base_path_token = "/auth"
     full_url = base_url + base_path_token
     json_payload_auth = {
@@ -62,7 +61,34 @@ def test_put_request():
     print(access_token)
     print(booking_id)
 
-    base_path_put = "/booking" + str(booking_id)
+    base_path_put = "/booking/" + str(booking_id)
     full_url_put = base_url + base_path_put
-
     print(full_url_put)
+
+    auth_cookie = "token=" + access_token
+    print(auth_cookie)
+
+    json_paylod_update = {
+        "firstname": "James",
+        "lastname": "Brown",
+        "totalprice": 111,
+        "depositpaid": True,
+        "bookingdates": {
+            "checkin": "2018-01-01",
+            "checkout": "2019-01-01"
+        },
+        "additionalneeds": "Breakfast"
+    }
+
+    update_header = {
+        "Content-Type" : "application/json",
+        "Cookie" : auth_cookie
+    }
+
+    put_response = requests.put(url=full_url_put,headers=update_header,json=json_paylod_update)
+    print(put_response)
+
+    assert put_response.status_code == 200
+    assert put_response.json()["firstname"] == "James"
+
+
