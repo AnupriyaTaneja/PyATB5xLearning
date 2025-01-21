@@ -92,3 +92,4 @@ def test_put_request():
     assert put_response.json()["firstname"] == "James"
 
 
+
