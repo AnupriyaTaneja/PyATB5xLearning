@@ -91,5 +91,57 @@ def test_put_request():
     assert put_response.status_code == 200
     assert put_response.json()["firstname"] == "James"
 
+def test_partial_update():
+    access_token = get_token()
+    booking_id = get_booking_id()
+   # print(access_token)
+    #print(booking_id)
+
+    base_path_patch = "/booking/" + str(booking_id)
+    full_url_patch = base_url + base_path_patch
+    #print(full_url_patch)
+
+    auth_cookie = "token=" + access_token
+    #print(auth_cookie)
+
+    json_paylod_patch = {
+        "firstname": "James",
+        "lastname": "Brown"
+    }
+
+    patch_header = {
+        "Content-Type": "application/json",
+        "Cookie": auth_cookie
+    }
+
+    patch_response = requests.patch(url=full_url_patch, headers=patch_header, json=json_paylod_patch)
+    print(patch_response)
+
+    assert patch_response.status_code == 200
+    assert patch_response.json()
+
+def test_delete_booking():
+    access_token = get_token()
+    booking_id = get_booking_id()
+#    print(access_token)
+    print(booking_id)
+
+    base_path_delete = "/booking/" + str(booking_id)
+    full_url_delete = base_url + base_path_delete
+  #  print(full_url_delete)
+
+    auth_cookie = "token=" + access_token
+    #print(auth_cookie)
+
+    delete_header = {
+        "Content-Type": "application/json",
+        "Cookie": auth_cookie
+    }
+
+    delete_response = requests.delete(url=full_url_delete,headers=delete_header)
+    print("Booking record deleted for booking id: ",booking_id)
+    assert delete_response.status_code == 201
+
+
 
 
