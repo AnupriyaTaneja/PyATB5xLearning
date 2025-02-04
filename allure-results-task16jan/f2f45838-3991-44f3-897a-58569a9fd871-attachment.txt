@@ -1,0 +1,2 @@
+Login button clicked
+TC1 passed
